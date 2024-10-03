@@ -3,7 +3,9 @@ const multiTarget: number = 9;
 const limit: number = 10;
 
 for (let i: number = 1; i <= 10; i++) {
-  console.log(`${multiTarget} x ${limit} = ${multiTarget * limit}`);
+  console.log(`${multiTarget} x ${i} = ${multiTarget * i
+
+  }`);
 }
 
 // 2. Palindrome Checker
@@ -31,4 +33,6 @@ const duit: number = 150000;
 const rp: string = `Rp ${duit.toLocaleString()},00`;
 console.log(rp);
 
-// 5.
+// 5. Remove string first occurrence 
+const sentence: string = "Hello World"
+let sentenceResult:string=sentence.slice()
