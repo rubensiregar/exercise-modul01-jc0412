@@ -31,6 +31,7 @@ const rp: string = `Rp ${duit.toLocaleString()},00`;
 console.log(rp);
 
 // 5. Remove string first occurrence
+// komen baru supaya bisa di add ke staging area
 const sentence: string = "Hello World";
 let sentenceResult: string = sentence.replace("ell", "");
 console.log(sentenceResult);
