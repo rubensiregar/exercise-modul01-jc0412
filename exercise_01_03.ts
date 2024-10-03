@@ -1,12 +1,12 @@
 // 1. Multiplication Table
 const multiTarget: number = 9;
 const limit: number = 10;
-
+let tabelPerkalian: string = "";
 for (let i: number = 1; i <= 10; i++) {
-  console.log(`${multiTarget} x ${i} = ${multiTarget * i
-
-  }`);
+  
+  tabelPerkalian += (`${multiTarget} x ${i} = ${multiTarget * i} \n`);
 }
+console.log(tabelPerkalian);
 
 // 2. Palindrome Checker
 const wordInput: string = "madam madam";
