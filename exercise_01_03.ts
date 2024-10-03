@@ -36,6 +36,8 @@ let sentenceResult: string = sentence.replace("ell", "");
 console.log(sentenceResult);
 
 // 6. Capitalize first letter per word
+// bisa: let result = text.replace(regex-nya, function (x) {return x.toUpperCase()
+
 let sentenceCap: string = "hello new world, im here to learn";
 let resultCap: string = "";
 // sentenceCap.split(" ")
@@ -70,39 +72,93 @@ console.log(resSwap);
 // 8. Biggest
 const num1: number = 42;
 const num2: number = 27;
+let biggest: number = 0;
 
 if (num1 > num2) {
-  console.log(num1);
+  biggest = num1;
 } else if (num2 > num1) {
-  console.log(num2);
+  biggest = num2;
 }
+console.log(biggest);
 
 // 9. Sorting
-const i: number = 42;
-const j: number = 50;
-const k: number = 100;
-let sort: string="";
-/**harus ada permutasi
- ijk---
- ikj
- jik---
- jki
- kij---
- kji---
- **/
-if (i > j) {
-  if (j > k) {
-    sort = `${i}, ${j}, ${k}`;
-  } else if (k > i) {
-    sort = `${k}, ${i}, ${j}`;
+let i: number = 10;
+let j: number = 50;
+let k: number = 100;
+let sort: string = "";
+let saku: number = 0;
+
+if (i < j && i < k) {
+  sort += `${i}, `;
+  if (j < k) {
+    sort += `${j}, ${k}`;
+  } else {
+    sort += `${k}, ${j}`;
   }
-} else if (i > k) {
-  sort = `${j}, ${i}, ${k}`;
-} else if (k > j) {
-  sort = `${k}, ${j}, ${i}`;
+} else if (j < i && j < k) {
+  sort += `${j}, `;
+  if (i < k) {
+    sort += `${i}, ${k}`;
+  } else {
+    sort += `${k}, ${i}`;
+  }
+} else if (k < i && k < j) {
+  sort += `${k}, `;
+  if (i < j) {
+    sort += `${i}, ${j}`;
+  } else {
+    sort += `${j}, ${i}`;
+  }
 }
 console.log(sort);
 
+// cara geraldo
+if (i > j) {
+  saku = i;
+  i = j;
+  j = saku;
+}
+if (i > k) {
+  saku = i;
+  i = k;
+  k = saku;
+}
+if (j > k) {
+  saku = j;
+  j = k;
+  k = saku;
+}
+console.log(`${i}, ${j}, ${k}`);
+
 // 10. Type checker
+let masukan = true;
+let keluaran;
+
+switch (typeof masukan) {
+  case "string": {
+    keluaran = 1;
+    break;
+  }
+  case "number": {
+    keluaran = 2;
+    break;
+  }
+  default: {
+    keluaran = 3;
+    break;
+  }
+}
+console.log(keluaran);
 
 // 11. Asterisk Changer
+// bisa: let result = text.replace(/blue|house|car/gi, function (x) {return x.toUpperCase()
+const targetAst: string = "An apple a day keeps the doctor away";
+let resAst: string = targetAst.toLowerCase();
+for (let i: number = 0; i < targetAst.length; i++) {
+  console.log(i);
+
+  resAst = resAst.replace("a", "*");
+  console.log(resAst);
+}
+
+console.log(resAst);
