@@ -39,7 +39,7 @@ console.log(sentenceResult);
 // 6. Capitalize first letter per word
 // bisa: let result = text.replace(regex-nya, function (x) {return x.toUpperCase()
 
-let sentenceCap: string = "hello new world, im here to learn";
+let sentenceCap: string = "heLlO nEW worLD, im hERe to leArn";
 let resultCap: string = "";
 // sentenceCap.split(" ")
 // lalu bisa di join menggunakan Array.join()
@@ -51,24 +51,25 @@ for (let i: number = 0; i < sentenceCap.length; i++) {
   if (i === 0 || charPrev === " ") {
     resultCap += char.toUpperCase();
   } else {
-    resultCap += char;
+    resultCap += char.toLocaleLowerCase();
   }
   console.log(resultCap);
 }
+
 console.log(resultCap);
 
 // 7. Swap case each character
-const sSwap: string = "The QuiCk BrOwN Fox";
-let resSwap: string = "";
+// const sSwap: string = "The QuiCk BrOwN Fox";
+// let resSwap: string = "";
 
-for (let i = 0; i < sSwap.length; i++) {
-  if (sSwap.charAt(i) === sSwap.charAt(i).toUpperCase()) {
-    resSwap += sSwap.charAt(i).toLowerCase();
-  } else {
-    resSwap += sSwap.charAt(i).toUpperCase();
-  }
-}
-console.log(resSwap);
+// for (let i = 0; i < sSwap.length; i++) {
+//   if (sSwap.charAt(i) === sSwap.charAt(i).toUpperCase()) {
+//     resSwap += sSwap.charAt(i).toLowerCase();
+//   } else {
+//     resSwap += sSwap.charAt(i).toUpperCase();
+//   }
+// }
+// console.log(resSwap);
 
 // 8. Biggest
 const num1: number = 42;
