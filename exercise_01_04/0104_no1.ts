@@ -1,5 +1,5 @@
 // 1 Triangle print (coba recrusive)
-const tinggi: number = 4;
+const tinggi: number = 18;
 
 function printTri(t: number): string {
     let count: number = 0;
@@ -9,7 +9,7 @@ function printTri(t: number): string {
 
     for (let i: number = 1; i <= t; i++) {
         count++;
-        console.log(count);
+        // console.log(count);
         tri += "\n";
 
         for (let j: number = 1; j <= count; j++) {
@@ -19,8 +19,8 @@ function printTri(t: number): string {
                 digit2 = 0;
                 digit1++;
             }
-            console.log(`${digit1}${digit2}`);
-            tri += `${digit1}${digit2}`;
+            // console.log(`${digit1}${digit2}`);
+            tri += `${digit1}${digit2} `;
         }
     }
     return tri;
