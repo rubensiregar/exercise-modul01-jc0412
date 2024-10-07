@@ -1,11 +1,10 @@
-let inputArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const inputArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function removeOdd(inArr: number[]): number[] {
-    let outArr: number[] = [];
-    let j: number = 0;
+    const outArr: number[] = [];
+
     for (const i of inArr) {
         if (inArr[i] % 2 === 0) {
-            outArr[j] = inArr[i];
-            j++;
+            outArr.push(inArr[i]);
         }
     }
     return outArr;
