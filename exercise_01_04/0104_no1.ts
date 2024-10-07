@@ -2,14 +2,12 @@
 const tinggi: number = 8;
 
 function printTri(t: number): string {
-    let kolom: number = 0;
     let tri: string = "";
     let digit1: number = 0;
     let digit2: number = 0;
 
     for (let i: number = 1; i <= t; i++) {
-        kolom++;
-        for (let j: number = 1; j <= kolom; j++) {
+        for (let j: number = 1; j <= i; j++) {
             if (digit2 < 9) {
                 digit2++;
             } else {
