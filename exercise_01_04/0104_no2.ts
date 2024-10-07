@@ -1,5 +1,5 @@
 // 2. Fizz Buzz
-let input2: number = 15;
+let input2: number = 50;
 let fizzbuzz: string[] = [];
 
 function toFizzBuzz(n: number): string[] {
