@@ -12,3 +12,4 @@ function removeOdd(inArr: number[]): number[] {
 
 let arrayGenap: number[] = removeOdd(inputArray);
 console.log(arrayGenap);
+

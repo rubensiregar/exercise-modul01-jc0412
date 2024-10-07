@@ -1,4 +1,5 @@
 // 5. String to Array(spt split)
+// ! kudu direfactor biar seklai jalan aja
 let inputText: string = "Hello World Lets Learn";
 
 function jadiArray(inText: string): string[] {
@@ -9,10 +10,12 @@ function jadiArray(inText: string): string[] {
     for (let i: number = 0; i < panjang; i++) {
         if (inText.charAt(i) === " ") jumKata++;
     }
+    console.log(jumKata);
 
     for (let i: number = 0; i < jumKata; i++) {
         let panjKata: number = 0;
         outWord[i] = "";
+
         for (let j: number = 0; j < panjang; j++) {
             panjKata++;
             if (inText.charAt(j) === " ") {
@@ -20,6 +23,7 @@ function jadiArray(inText: string): string[] {
             }
             outWord[i] += inText.charAt(j);
         }
+
         inText = inText.slice(panjKata);
     }
 
