@@ -22,7 +22,6 @@ function inToArray(size: number, ...lanjut: number[]): number[] {
     }
     return out;
 }
-
 console.log(inToArray(maxSize, 2, 3, 4, 5, 67, 8, 8, 9, 9));
 
 // 8. Combine
@@ -60,22 +59,22 @@ function dupePrint(arr: number[]): number[] {
 
 console.log(dupePrint(arrG));
 
-// 10. Diff Catcher
+// ! 10. Diff Catcher
 const arrI: number[] = [1, 2, 3, 4, 5];
 const arrJ: number[] = [3, 4, 5, 6, 7, 8, 1];
-arrI.find;
-function diffPrint(arr1: number[], arr2: number[]): number[] {
-    const out: number[] = [];
-    const index: number = Math.max(arr1.length, arr2.length);
-    console.log(index);
 
-    arr1.find((element, index) => element === arr2[index])
-        ? {}
-        : out.push(arr1[index]);
-    // for (let i: number = 0; i < index; i++) {
-    // }
+// function diffPrint(arr1: number[], arr2: number[]): number[] {
+//     const out: number[] = [];
+//     const index: number = Math.max(arr1.length, arr2.length);
+//     console.log(index);
 
-    return out;
-}
+//     arr1.find((element, index) => element === arr2[index])
+//         ? {}
+//         : out.push(arr1[index]);
+//     // for (let i: number = 0; i < index; i++) {
+//     // }
+
+//     return out;
+// }
 
 console.log(diffPrint(arrI, arrJ));

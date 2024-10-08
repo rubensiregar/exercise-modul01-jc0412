@@ -45,13 +45,21 @@ let coba = toStringComma(arr2);
 console.log(coba);
 
 // 3. Second Smallest
-const arr3: number[] = [5, 3, 1, 7, 2, 6];
+const arr3: number[] = [5, 2, 1, 1, 1, 3, 1, 1, 7, 2, 6];
 
 function secondLowest(arr3: number[]): number {
-    const arrSort: number[] = arr3.sort((a: number, b: number) => {
+    arr3.sort((a: number, b: number) => {
         return a - b;
     });
-    return arrSort[1];
+    let second: number = arr3[0];
+    for (let i = 0; i < arr3.length; i++) {
+        if (arr3[i] < arr3[i + 1]) {
+            second = arr3[i + 1];
+            break;
+        }
+    }
+
+    return second;
 }
 
 console.log(secondLowest(arr3));

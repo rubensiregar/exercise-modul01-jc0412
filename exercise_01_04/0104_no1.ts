@@ -21,6 +21,5 @@ function printTri(t: number): string {
     }
     return tri;
 }
-
 let tri: string = printTri(tinggi);
 console.log(tri);
