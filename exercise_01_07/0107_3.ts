@@ -2,7 +2,7 @@ function mergeClean(
     a: { name: any; email: any }[],
     b: { name: any; email: any }[]
 ) {
-    let out: any = [...a];
+    const out: any = [...a];
 
     for (let i in b) {
         let sama = false;
@@ -10,6 +10,7 @@ function mergeClean(
         for (let j in out) {
             if (b[i].name === out[j].name) {
                 sama = true;
+                break;
             }
         }
 
