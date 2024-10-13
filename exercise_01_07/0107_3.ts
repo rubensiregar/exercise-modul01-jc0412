@@ -1,3 +1,4 @@
+// sebaiknya mengecek keunikan menggunakan email
 function mergeClean(
     a: { name: any; email: any }[],
     b: { name: any; email: any }[]

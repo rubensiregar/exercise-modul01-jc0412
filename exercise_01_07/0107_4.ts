@@ -1,11 +1,15 @@
 // 4. SwitchARooney
 function SwitchARooney(input: Arek[]): any[] {
-    let temp: {};
+    let temp: {} = {};
     let output: any[] = [];
 
     input.map((element: any) => {
         for (const key in element) {
-            temp = { ...temp, [element[key]]: key };
+            // ! kurung siku menandakan bahwa mengakses value nya ke dalam sistem
+            let keyBaru = element[key];
+            console.log(keyBaru);
+
+            temp[keyBaru] = key;
         }
         output.push(temp);
         temp = {};

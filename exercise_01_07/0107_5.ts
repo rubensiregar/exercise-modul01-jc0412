@@ -1,4 +1,5 @@
 function factorial(n: number): number {
+    // ! tidak perlu variabel penampung
     let total: number;
 
     if (n === 0) {
